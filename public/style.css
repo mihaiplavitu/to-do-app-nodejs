@@ -1,0 +1,269 @@
+/* Space out content a bit */
+body {
+  margin: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 1.2em;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.page-header {
+    margin-top: 0;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+
+ul.toDoList {
+    list-style-type: none;
+    line-height: 1.7em;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.hidden {
+    display: none;
+}
+
+.add-new-button {
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    padding: 7px 15px;
+    border-radius: 10px;
+    max-width: 130px;
+}
+
+.add-new-button:hover {
+    opacity: 0.8;
+}
+
+.add-new-button:active {
+    opacity: 1;
+}
+
+.submit-button {
+    background-color: green;
+    padding: 5px 15px;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    border-radius: 7px;
+    margin: 0 0 0 3.5em;
+}
+
+.submit-button:hover {
+    opacity: 0.8;
+}
+
+.submit-button:active {
+    opacity: 1;
+}
+
+.trash-icon {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: -2px 7px;
+}
+
+.trash-icon:hover {
+    opacity: 0.8;
+}
+
+.trash-icon:active {
+    opacity: 1;
+}
+
+/* style for input elm with toDo text */
+.toDoText {
+    font-size: 1.2em;
+    margin: 1px 3px;
+    position: absolute;
+    border-style: none;
+}
+
+/* hide normal chheckbox and position it to match checkboxOverlay*/
+.myCheckbox {
+    z-index: 999;
+    display: inline-block;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin: 0 3px;
+}
+
+/* create custom checkbox background and position it */
+.checkboxOverlay {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    margin: 0 3px;
+    border-radius: 7px;
+}
+
+/* change background color of .checkboxOverlay when .myCheckbox is hovered */
+.myCheckbox:hover + .checkboxOverlay{
+     background-color: #ccc;
+}
+
+/* Create the checkboxOverlay/indicator (hidden when not checked) */
+.checkboxOverlay:after {
+    content: "";
+    position: relative;
+    display: none;
+}
+
+/* Style the checkboxOverlay/indicator */
+.checkboxOverlay:after {
+    left: 9px;
+    top: 3px;
+    width: 5px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Show the checkboxOverlay when checked */
+input[type=checkbox]:checked ~ .checkboxOverlay:after {
+    display: block;
+}
+
+/* when the checkbox is checked, add a background color*/
+input[type=checkbox]:checked ~ .checkboxOverlay {
+    background-color: #2196F3;
+}
+
+.loading-text {
+    font-size: 1.2em;
+}
+
+/* loading animation */
+.loading {
+  margin: 40px;
+  width: 80px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.loading > div {
+  width: 18px;
+  height: 18px;
+  background-color: #2196F3;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1s infinite ease-in-out both;
+  animation: sk-bouncedelay 1s infinite ease-in-out both;
+}
+
+.loading .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loading .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  transform: scale(0); }
+
+  40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}

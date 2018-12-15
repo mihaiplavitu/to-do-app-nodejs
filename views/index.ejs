@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <% include ./partials/head %>
+</head>
+
+<body>
+    <header>
+        <% include ./partials/header %>
+    </header>
+
+    <h2>Hi <%= user.name %>,</h2>
+    <h4>Here is your To Do list</h4>
+    <div class="loading-text">
+        <div class="loading">
+            Loading...
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div></div>
+        </div>
+    </div>
+    <br />
+    <ul class="toDoList">
+    </ul>
+    <div class="add-new-button">Add New</div>
+    <br />
+    <div id="newToDoResponse"></div>
+
+    <div id="newToDoBox" class="new-to-do-box hidden">
+        <form action="/api/todo" method="post" name="newToDoFrom" id="newToDoFrom">
+            To Do: <input type="text" name="toDo" id="toDo" value=""><br />
+            <input type="text" name="isDone" id="isDone" value="" hidden>
+            <input type="text" name="hasAttachment" id="hasAttachment" value="" hidden>
+            <br />
+            <input type="submit" class="submit-button"/>
+        </form>
+    </div>
+
+    <footer>
+        <% include ./partials/footer %>
+    </footer>
+</body>
+
+</html>
